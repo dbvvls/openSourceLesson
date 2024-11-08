@@ -1,16 +1,16 @@
 #!/bin/bash
 
-read -p "폴더 이름을 입력하세요: " dirname
+read -p "Enter directory name: " dirname
 
 if [ ! -d "$dirname" ]; then
     mkdir "$dirname"
-    echo "$dirname 디렉토리를 생성했습니다."
+    echo "$dirname created directory."
 fi
 
 for i in {0..4}; do
     touch "$dirname/file$i.txt"
 done
 
-echo "파일이 생성되었습니다:"
+echo "directory is created:"
 ls "$dirname"
 
